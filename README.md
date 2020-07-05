@@ -1,4 +1,4 @@
-# TheUsualSuspects
+﻿# The Usual Suspects
  Project for the Logic for Programming course
 
 The project aims to develop a program in Prolog that, based on a set of clues, allows to answer the challenge of a detective. That said, seven different predicates had to be represented, which allowed learning to work with various functions that manipulate lists in Prolog using recursion. These predicates allow not only to specify characteristics of the Suspects list, but also to describe the relationships between the positions occupied by the suspects.
@@ -11,11 +11,13 @@ The project aims to develop a program in Prolog that, based on a set of clues, a
 
 - For the realization of this predicate, the “member” function of Prolog was used, which returns true if the Suspect is an element of the list, otherwise it returns false.
 
+
 2) side (Suspect1, Suspect2, Suspects)
 
 - Indicates that Suspect1 and Suspect2 are next to each other (regardless of being on the left / right), in the Suspects list.
 
 - For the realization of this predicate, the “nextto” function of the Prolog was used, which returns true if the second element comes after the first in the list, otherwise it returns false.
+
 
 3) between (Suspect1, Suspect2, Suspect3, Suspects)
 
@@ -23,17 +25,20 @@ The project aims to develop a program in Prolog that, based on a set of clues, a
 
 - For the realization of this predicate, we searched for the 3 suspects in a row and recursively called the rest of the list, returning true if Suspect2 is between Suspect1 and Suspect3, otherwise it returns false.
 
+
 4) left (Suspect1, Suspect2, Suspects)
 
 - Indicates that Suspect1 is to the left of Suspect2 (not necessarily in the position immediately following).
 
 - For the realization of this predicate, the list of suspects was searched for suspect2 in the second position of the list and recursively called the rest of the list until reaching the end, returning true if Suspect1 is to the left of Suspect2, otherwise it returns false.
 
+
 5) right (Suspect1, Suspect2, Suspects)
 
 - Indicates that Suspect1 is to the right of Suspect2 (not necessarily in the position immediately following).
 
 - For the realization of this predicate, the “left” predicate created previously was called and the position suspects were changed, returning true if Suspect1 is to the right of Suspect2, otherwise it returns false.
+
 
 6) Don't Enter (Suspect1, Suspect2, Suspect3, Suspects)
 
